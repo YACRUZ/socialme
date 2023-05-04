@@ -1,6 +1,5 @@
-import React, {Component} from "react";
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Routes, Route, Link } from "react-router-dom";
 
@@ -11,29 +10,42 @@ class App extends Component {
   render() {
     return (
       <div>
-        <nav className="navbar navbar-expand navbar-dark bg-dark">
-          <a href="/" className="navbar-brand">
-            bezKoder
-          </a>
-          <div className="navbar-nav mr-auto">
+        <nav className="navbar navbar-expand navbar-dark img-background">
+          <div className="navbar-nav ml-auto">
             <li className="nav-item">
               <Link to={"/"} className="nav-link">
-                Tutorials
+                <button className="pinterest-btn pinterest-btn--black">
+                  Publicaciones
+                </button>
               </Link>
             </li>
-            <li className="nav-item">
+          </div>
+          <a href="/" className="mx-auto animes-titulo">
+            Animes
+          </a>
+          <div className="navbar-nav mr-auto ml-auto">
+            <li className="nav-item mr-0">
               <Link to={"/add"} className="nav-link">
-                Add
+                <button className="pinterest-btn pinterest-btn--black">
+                  Crear publicacion
+                </button>
               </Link>
             </li>
           </div>
         </nav>
 
-        <div className="container mt-3">
-          <h2>React Firestore CRUD</h2>
+        <div className="container mt-3 background-back">
+          <h2>SocialMe</h2>
           <Routes>
-            <Route path="/" element={<ImagenesList/>} />
-            <Route path="add" element={<AddImagen/>} />
+            <Route path="/" element={
+              <>
+                <div class="finder cont-center">
+                  <input type="text" placeholder="🔎 Search" />
+                </div>
+                <ImagenesList />
+              </>
+            } />
+            <Route path="add" element={<AddImagen />} />
           </Routes>
         </div>
       </div>

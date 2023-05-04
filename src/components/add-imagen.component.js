@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "../App.css";
 import TutorialDataService from "../services/imagen.service";
 
 import "firebase/compat/storage";
@@ -56,7 +57,8 @@ export default class Addimagen extends Component {
             .child(file.name)
             .getDownloadURL()
             .then((myurl) =>  { 
-              this.state.url = myurl;
+              alert(myurl);
+              this.setState({url : myurl});
              });
     });
 
@@ -141,7 +143,6 @@ export default class Addimagen extends Component {
                 />
                 <button disabled={!this.state.file}>upload to firebase</button>
               </form>
-              <img src={this.url} alt="" />
             </div>
 
             <button onClick={this.saveTutorial} className="btn btn-success">
