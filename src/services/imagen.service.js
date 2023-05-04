@@ -20,4 +20,5 @@ class TutorialDataService {
   }
 }
 
-export default new TutorialDataService();
+const tutorialDataService = new TutorialDataService();
+export default tutorialDataService;

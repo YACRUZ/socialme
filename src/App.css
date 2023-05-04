@@ -240,3 +240,8 @@ h2 {
   outline: none;
   border: 1px solid #ff0066;
 }
+
+.profile-container {
+  position: sticky;
+  bottom: 0;
+}
