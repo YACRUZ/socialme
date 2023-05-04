@@ -2,7 +2,7 @@ import firebase from "../firebase";
 
 const db = firebase.collection("/Imagenes");
 
-class ImagenDataService {
+class TutorialDataService {
   getAll() {
     return db;
   }
@@ -20,4 +20,5 @@ class ImagenDataService {
   }
 }
 
-export default new ImagenDataService();
+const tutorialDataService = new TutorialDataService();
+export default tutorialDataService;

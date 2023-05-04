@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 import TutorialDataService from "../services/imagen.service";
+import "../App.css";
+
+
 
 export default class Imagen extends Component {
   constructor(props) {
@@ -108,75 +111,20 @@ export default class Imagen extends Component {
       });
   }
 
+ 
+
   render() {
     const { currentTutorial } = this.state;
 
     return (
       <div>
-        <h4>Tutorial</h4>
+        <h4>Publicación</h4>
         {currentTutorial ? (
-          <div className="edit-form">
-            <form>
-              <div className="form-group">
-                <label htmlFor="title">Title</label>
-                <input
-                  type="text"
-                  className="form-control"
-                  id="title"
-                  value={currentTutorial.title}
-                  onChange={this.onChangeTitle}
-                />
-              </div>
-              <div className="form-group">
-                <label htmlFor="description">Description</label>
-                <input
-                  type="text"
-                  className="form-control"
-                  id="description"
-                  value={currentTutorial.description}
-                  onChange={this.onChangeDescription}
-                />
-              </div>
-
-              <div className="form-group">
-                <label>
-                  <strong>Status:</strong>
-                </label>
-                {currentTutorial.published ? "Published" : "Pending"}
-              </div>
-            </form>
-
-            {currentTutorial.published ? (
-              <button
-                className="badge badge-primary mr-2"
-                onClick={() => this.updatePublished(false)}
-              >
-                UnPublish
-              </button>
-            ) : (
-              <button
-                className="badge badge-primary mr-2"
-                onClick={() => this.updatePublished(true)}
-              >
-                Publish
-              </button>
-            )}
-
-            <button
-              className="badge badge-danger mr-2"
-              onClick={this.deleteTutorial}
-            >
-              Delete
-            </button>
-
-            <button
-              type="submit"
-              className="badge badge-success"
-              onClick={this.updateTutorial}
-            >
-              Update
-            </button>
-            <p>{this.state.message}</p>
+          
+          <div className="edit-form background-element col-md-22">
+            <span className="cont-center tx3">{this.state.title}</span>
+            <img src={this.state.url} width="250" alt="Imagen"></img>
+            <span className="cont-center tx1">{this.state.description}</span>
           </div>
         ) : (
           <div>

@@ -18,3 +18,230 @@
   max-width: 300px;
   margin: auto;
 }
+
+.img-background {
+  background-image: url('https://i.pinimg.com/564x/3b/57/dd/3b57dd43135a59ce570da60442d462d6.jpg');
+}
+
+.color-back{
+  background-color: #bbbbbb;
+}
+
+.background-back {
+  background-color: #fff;
+  background-size: cover;
+  background-attachment: fixed;
+
+}
+
+.background-element{
+  background-color: #f2f2f2;
+  padding: 7%;
+  border-radius: 3%;
+}
+
+.pinterest-btn {
+  display: inline-block;
+  height: 36px;
+  padding: 0 12px;
+  border-radius: 18px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 34px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.pinterest-btn--black {
+  color: #fff;
+  background-color: #000000;
+  border: none;
+}
+
+.animes-titulo {
+  font-size: 50px;
+  color: black;
+  font-weight: bold; 
+  text-shadow: 3px 3px rgb(255, 0, 200); 
+  font-family: 'Arial', sans-serif;
+  text-decoration: none;
+}
+
+.animes-titulo:hover {
+  color: black; 
+}
+
+h2 {
+  color: rgb(0, 0, 0);
+  font-weight: bold; 
+  text-shadow: 1.5px 1.5px rgb(136, 136, 136); 
+  font-family: cursive;
+  text-decoration: none;
+}
+
+.tx1 {
+  color: rgb(0, 0, 0);
+  font-size: 15px;
+  font-weight: bold;  
+  font-family: cursive;
+  text-decoration: none;
+}
+
+.tx2{
+  color: rgb(0, 0, 0);
+  font-size: 15px;
+  font-family: fantasy;
+  text-decoration: none;
+}
+
+.tx25{
+  color: rgb(0, 0, 0);
+  font-size: 30px;
+  font-family: fantasy;
+  text-decoration: none;
+}
+
+.tx3{
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  font-family: initial;
+  text-decoration: none;
+}
+
+
+.text-center{
+  text-align: center;
+}
+
+.cont-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cont-center1{
+  display: block;
+  justify-content: center;
+  align-items: center;
+}
+
+.radius{
+  border-radius: 5%;
+}
+.finder {
+  display: flex;
+  align-items: center;
+}
+
+.finder input {
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  width: 800px;
+  border-radius: 20px;
+  background-color: #f2f2f2;
+  margin-left: 20px;
+}
+
+.finder button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.profile-pic {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.profile-pic img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.profile-pic span {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.like-button-container {
+  display: flex;
+  justify-content: left;
+  align-items: left;
+}
+
+.like-button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: 12px;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.like-button:hover {
+  color: #8c3ee5;
+}
+
+/* For mobile screens */
+@media (max-width: 768px) {
+  .like-button-container {
+    align-items: left;
+    justify-content: left;
+    text-align: center;
+  }
+
+  .like-button {
+    font-size: 12px;
+    border: none;
+    margin: 0;
+    align-items: left;
+    justify-content: left;
+    text-align: center;
+  }
+}
+
+#reactions > * {
+  display: inline-block;
+}
+
+.img {
+  border-radius: 50%;
+}
+
+.newComment {
+  margin-left: 10px;
+  margin-top: 15px;
+}
+
+.comentarios > * {
+  display: inline-block;
+}
+
+.input-pinterest {
+  padding: 12px 16px;
+  border-radius: 24px;
+  border: 1px solid #dcdcdc;
+  font-size: 16px;
+  font-weight: 400;
+  color: #262626;
+  width: 100%;
+  margin-left: 8px;
+  box-shadow: none;
+  transition: all 0.3s ease;
+}
+
+.input-pinterest:focus {
+  outline: none;
+  border: 1px solid #ff0066;
+}
+
+.profile-container {
+  position: sticky;
+  bottom: 0;
+}
