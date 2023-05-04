@@ -122,7 +122,7 @@ export default class ImagenesList extends Component {
           {currentTutorial ? (
             <Imagen tutorial={currentTutorial} refreshList={this.refreshList} />
           ) : (
-            <div>
+            <div className="profile-container">
               <h4>Perfil</h4>
               <span className="background-element cont-center1">
                 <p className="tx25 text-center">Yacruz</p>
