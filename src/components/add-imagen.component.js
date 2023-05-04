@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "../App.css";
 import TutorialDataService from "../services/imagen.service";
 
 import "firebase/compat/storage";
@@ -56,7 +57,8 @@ export default class Addimagen extends Component {
             .child(file.name)
             .getDownloadURL()
             .then((myurl) =>  { 
-              this.state.url = myurl;
+              alert(myurl);
+              this.setState({url : myurl});
              });
     });
 
@@ -96,15 +98,15 @@ export default class Addimagen extends Component {
       <div className="submit-form">
         {this.state.submitted ? (
           <div>
-            <h4>You submitted successfully!</h4>
+            <h4>Se agrego correctamente!</h4>
             <button className="btn btn-success" onClick={this.newTutorial}>
-              Add
+              Agregar
             </button>
           </div>
         ) : (
           <div>
-            <div className="form-group">
-              <label htmlFor="title">Title</label>
+            <div className="form-group tx1">
+              <label htmlFor="title">Titulo</label>
               <input
                 type="text"
                 className="form-control"
@@ -116,8 +118,8 @@ export default class Addimagen extends Component {
               />
             </div>
 
-            <div className="form-group">
-              <label htmlFor="description">Description</label>
+            <div className="form-group tx1">
+              <label htmlFor="description">Descripción</label>
               <input
                 type="text"
                 className="form-control"
@@ -139,13 +141,12 @@ export default class Addimagen extends Component {
                     this.onChangeFile(event);
                   }}
                 />
-                <button disabled={!this.state.file}>upload to firebase</button>
+                <button disabled={!this.state.file}>Subir a firebase</button>
               </form>
-              <img src={this.url} alt="" />
             </div>
 
             <button onClick={this.saveTutorial} className="btn btn-success">
-              Submit
+              Subir
             </button>
           </div>
         )}
