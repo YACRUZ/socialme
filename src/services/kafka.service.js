@@ -20,4 +20,5 @@ class KafkaService {
   
   }
   
-  export default new KafkaService();
+  const KafkaService = new KafkaService();
+  export default KafkaService;
