@@ -245,3 +245,8 @@ h2 {
   position: sticky;
   bottom: 0;
 }
+
+.no-line{
+  text-decoration:none;
+  color: #f2f2f2; 
+}
