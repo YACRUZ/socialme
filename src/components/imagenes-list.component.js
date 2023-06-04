@@ -11,6 +11,7 @@ import AngryButton from "../reactions/AngryButton.component";
 
 import Comment from "./comment.component";
 import Imagen from "./imagen.component";
+import { AuthProvider } from "../context/AuthContext";
 
 export default class ImagenesList extends Component {
   constructor(props) {
@@ -106,14 +107,16 @@ export default class ImagenesList extends Component {
                     ></img>
                   </div>
                   <div id="reactions">
-                    <LikeButton />
-                    <SadButton />
-                    <LoveButton />
-                    <WowButton />
-                    <HahaButton />
-                    <AngryButton />
+                    <AuthProvider>
+                      <LikeButton pubId={tutorial.id}/>
+                      <SadButton pubId={tutorial.id}/>
+                      <LoveButton pubId={tutorial.id}/>
+                      <WowButton pubId={tutorial.id}/>
+                      <HahaButton pubId={tutorial.id}/>
+                      <AngryButton pubId={tutorial.id}/>
+                    </AuthProvider>
                   </div>
-                  <Comment />
+                  <Comment pubId={tutorial.id}/>
                 </li>
               ))}
           </ul>
