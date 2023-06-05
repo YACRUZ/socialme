@@ -33,7 +33,7 @@ const CommentComponent = ({ pubId }) => {
   function saveComment(comm) {
     const uId = user.uid;
     const oId = pubId;
-    const comment = comm.content;
+    const comment = comm.comment;
     //console.log("user id", uId, "object id", oId, "comentario", comment);
     kafkaService.comment(uId, oId, comment);
 
